@@ -30,7 +30,8 @@ async def ask(body: AskBody):
 
     headers = {
         "Content-Type": "application/json",
-        "x-api-key": LANGFLOW_API_KEY,  # Langflow 鉴权
+#        "x-api-key": LANGFLOW_API_KEY,  # Langflow 鉴权
+        "Authorization": "Bearer " + LANGFLOW_API_KEY,
     }
 
     # 最常见的请求体（可按你的 Flow 输入结构调整）
